@@ -1,0 +1,41 @@
+<project>
+
+	<target name="compile">
+		<mkdir dir="bin2"/>
+		<javac srcdir="src"
+         destdir="bin2"
+         classpath="jarfile"
+         debug="on"
+	/>
+	</target>
+	
+	<target name="archive" depends="compile">
+		<mkdir dir="archive"/>
+		<jar destfile="archive/chess.jar" basedir="bin2">
+			<manifest>
+				<attribute name="Main-Class" value="GUI.Main"/>
+					<attribute name="Class-Path" value="."/>
+			</manifest>
+		</jar>
+	</target>
+	
+	<target name="permission" depends="archive">
+		<chmod perm="777" file="archive/chess.jar"></chmod>
+	</target>
+	
+	<target name="copyIconsToArchive" depends="permission">
+		<mkdir dir="archive/src/WhitePlayerPieces"/>
+		<mkdir dir="archive/src/BlackPlayerPieces"/>
+	        <copy todir="archive/src/WhitePlayerPieces">
+	            <fileset dir="src/WhitePlayerPieces">
+	            	<include name="**" />
+	            </fileset>
+	        </copy>
+			<copy todir="archive/src/BlackPlayerPieces">
+			     <fileset dir="src/BlackPlayerPieces">
+			        <include name="**" />
+			     </fileset>
+			</copy>
+	    </target>
+	
+</project>
