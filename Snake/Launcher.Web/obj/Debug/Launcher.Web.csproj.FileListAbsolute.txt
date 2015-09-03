@@ -1,0 +1,10 @@
+D:\Folder\Visual Studio 2013\Snake\Launcher.Web\bin\Launcher.Web.dll.config
+D:\Folder\Visual Studio 2013\Snake\Launcher.Web\bin\Launcher.Web.dll
+D:\Folder\Visual Studio 2013\Snake\Launcher.Web\bin\Launcher.Web.pdb
+D:\Folder\Visual Studio 2013\Snake\Launcher.Web\obj\Debug\Launcher.Web.csprojResolveAssemblyReference.cache
+D:\Folder\Visual Studio 2013\Snake\Launcher.Web\obj\Debug\Launcher.Web.dll
+D:\Folder\Visual Studio 2013\Snake\Launcher.Web\obj\Debug\Launcher.Web.pdb
+D:\Folder\Visual Studio 2013\Snake\Launcher.Web\bin\EntityFramework.dll
+D:\Folder\Visual Studio 2013\Snake\Launcher.Web\bin\EntityFramework.SqlServer.dll
+D:\Folder\Visual Studio 2013\Snake\Launcher.Web\bin\EntityFramework.xml
+D:\Folder\Visual Studio 2013\Snake\Launcher.Web\bin\EntityFramework.SqlServer.xml

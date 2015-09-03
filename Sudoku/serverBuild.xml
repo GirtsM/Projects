@@ -1,0 +1,32 @@
+<project>
+
+	
+	<target name="compile">
+		<mkdir dir="bin2"/>
+		<javac srcdir="src"
+         destdir="bin2"
+         classpath="jarfile"
+         debug="on"
+	/>
+	</target>
+	
+	<target name="archive" depends="compile">
+		<mkdir dir="archive"/>
+		<jar destfile="archive/server.jar" basedir="bin2">
+			<manifest>
+				<attribute name="Main-Class" value="Func.Server"/>
+					<attribute name="Class-Path" value="."/>
+			</manifest>
+		</jar>
+	</target>
+	
+	<target name="permission" depends="archive">
+		<chmod perm="777" file="archive/server.jar"></chmod>
+	</target>
+	
+	<target name="run" depends="permission">
+		<java jar="archive/server.jar" fork="true"></java>
+	</target>
+	
+
+</project>
